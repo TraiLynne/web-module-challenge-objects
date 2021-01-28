@@ -228,9 +228,15 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(milesSoFar) {
+    return {
+      odometer: milesSoFar,
+      drive: function(distance){
+        this.odometer = this.odometer + distance;
+
+        return this.odometer;
+      }
+    }
 }
 
 
@@ -246,5 +252,6 @@ export default{
   getReviewByIndex,
   getLastReview,
   getReviewByRating,
-  getLongReviews
+  getLongReviews,
+  carMaker
 }

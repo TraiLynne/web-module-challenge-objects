@@ -12,6 +12,8 @@ const reviews = [
     {name:"Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"},
 ]
 
+const myCar = functions.carMaker(125);
+
 describe('fooFunction', ()=>{
     it('foo returns foo', ()=>{
         expect(functions.foo()).toBe('bar');
@@ -58,4 +60,16 @@ describe('getLongReviews', () => {
     it('getLongReviews returns an array', () => {
         expect(functions.getLongReviews(reviews)).toHaveLength(3);
     })
+})
+
+describe('carMaker', ()=> {
+    it('carMaker creates an object containing the odometer value of the car', () => {
+        expect(functions.carMaker(10).odometer).toBe(10);
+        expect(functions.carMaker(20).odometer).toBe(20);
+        expect(functions.carMaker(1).odometer).toBe(1);
+    });
+
+    it('carMaker has a `drive` method that increases the odometer based on the distance provided', () => {
+        expect(myCar.drive(10)).toBe(135)
+    });
 })
