@@ -33,6 +33,12 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+let chipotle = createMenuItem('Chipotle', 11, 'dinner');
+let kfc = createMenuItem('KFC', 9, 'Dinner');
+let iHOP = createMenuItem('IHOP', 20, 'breakfast');
+
+console.log(chipotle, kfc, iHOP);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
