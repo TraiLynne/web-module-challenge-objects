@@ -20,7 +20,7 @@ function createMenuItem(name, price, category){
       name: name,
       price: price,
       category: category
-    }
+    };
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -61,7 +61,7 @@ export const burger = {
   discount: function(type){
     if(type === 'teacher' || type === 'student'){
       return this.price = this.price - (this.price * .25);
-    }
+    };
 
     this.price = this.price - (this.price * .1);
   }
@@ -79,7 +79,7 @@ const reviews = [
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
     {name: "Reyna", rating: 3.5, feedback: ""},
-]
+];
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
@@ -89,7 +89,7 @@ Using the reviews array above:
 console.log(reviews.forEach(a => {
   if (a.name === 'Julius') {
     console.log(a);
-  }
+  };
 }));
 
 
@@ -115,8 +115,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 reviews.forEach(a => {
   if (a.name === 'Reyna') {
     a.feedback = "this place is chill with really cool people, great for getting work done on weekdays";
-  }
-})
+  };
+});
 
 console.log(reviews);
 
@@ -181,9 +181,9 @@ Use the getReviewsByRating function below to do the following:
     return array.filter(a => {
       if (a.rating < (rating + 1) && a.rating >= rating) {
         return a;
-      }
+      };
     });
-  }
+  };
 
   console.log(getReviewByRating(reviews, 4))
 
@@ -204,10 +204,10 @@ Use the getLongReviews function below to do the following:
 function getLongReviews(array) {
     return array.filter(a => {
       if(a.feedback.split(' ').length > 15){
-        return a
-      }
-    })
-}
+        return a;
+      };
+    });
+};
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -235,9 +235,9 @@ function carMaker(milesSoFar) {
         this.odometer = this.odometer + distance;
 
         return this.odometer;
-      }
-    }
-}
+      },
+    };
+};
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */

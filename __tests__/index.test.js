@@ -30,7 +30,7 @@ describe('createMenuItem', ()=>{
 describe('burger.discount', ()=>{
     it('burger.discount returns a number', ()=>{
         expect(burger.discount('teacher')).toBe(13.5);
-    })
+    });
 });
 
 
@@ -43,24 +43,24 @@ describe('getReviewByIndex', ()=>{
 describe('getLastReview', ()=>{
     it('getLastReview returns a string', ()=>{
         expect(functions.getLastReview(reviews)).toBe(`Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays`);
-    })
+    });
 });
 
 describe('getReviewByRating', () => {
     it('getReviewByRating returns an array', () => {
-        expect(functions.getReviewByRating(reviews, 2)).toHaveLength(1)
-        expect(functions.getReviewByRating(reviews, 3)).toHaveLength(3)
-        expect(functions.getReviewByRating(reviews, 4)).toHaveLength(3)
-        expect(functions.getReviewByRating(reviews, 5)).toHaveLength(1)
-    })
+        expect(functions.getReviewByRating(reviews, 2)).toHaveLength(1);
+        expect(functions.getReviewByRating(reviews, 3)).toHaveLength(3);
+        expect(functions.getReviewByRating(reviews, 4)).toHaveLength(3);
+        expect(functions.getReviewByRating(reviews, 5)).toHaveLength(1);
+    });
 })
 
 
 describe('getLongReviews', () => {
     it('getLongReviews returns an array', () => {
         expect(functions.getLongReviews(reviews)).toHaveLength(3);
-    })
-})
+    });
+});
 
 describe('carMaker', ()=> {
     it('carMaker creates an object containing the odometer value of the car', () => {
@@ -70,6 +70,6 @@ describe('carMaker', ()=> {
     });
 
     it('carMaker has a `drive` method that increases the odometer based on the distance provided', () => {
-        expect(myCar.drive(10)).toBe(135)
+        expect(myCar.drive(10)).toBe(135);
     });
-})
+});
