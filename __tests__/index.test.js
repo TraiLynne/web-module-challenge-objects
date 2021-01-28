@@ -52,3 +52,10 @@ describe('getReviewByRating', () => {
         expect(functions.getReviewByRating(reviews, 5)).toHaveLength(1)
     })
 })
+
+
+describe('getLongReviews', () => {
+    it('getLongReviews returns an array', () => {
+        expect(functions.getLongReviews(reviews)).toHaveLength(3);
+    })
+})

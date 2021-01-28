@@ -201,9 +201,13 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+function getLongReviews(array) {
+    return array.filter(a => {
+      if(a.feedback.split(' ').length > 15){
+        return a
+      }
+    })
+}
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -241,5 +245,6 @@ export default{
   createMenuItem,
   getReviewByIndex,
   getLastReview,
-  getReviewByRating
+  getReviewByRating,
+  getLongReviews
 }
