@@ -58,7 +58,13 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(type){
+    if(type === 'teacher' || type === 'student'){
+      return this.price = this.price - (this.price * .25);
+    }
+
+    this.price = this.price - (this.price * .1);
+  }
 }
 
 
