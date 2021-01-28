@@ -43,3 +43,12 @@ describe('getLastReview', ()=>{
         expect(functions.getLastReview(reviews)).toBe(`Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays`);
     })
 });
+
+describe('getReviewByRating', () => {
+    it('getReviewByRating returns an array', () => {
+        expect(functions.getReviewByRating(reviews, 2)).toHaveLength(1)
+        expect(functions.getReviewByRating(reviews, 3)).toHaveLength(3)
+        expect(functions.getReviewByRating(reviews, 4)).toHaveLength(3)
+        expect(functions.getReviewByRating(reviews, 5)).toHaveLength(1)
+    })
+})

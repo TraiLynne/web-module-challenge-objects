@@ -177,9 +177,15 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, rating) {
+    return array.filter(a => {
+      if (a.rating < (rating + 1) && a.rating >= rating) {
+        return a;
+      }
+    });
   }
+
+  console.log(getReviewByRating(reviews, 4))
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -235,4 +241,5 @@ export default{
   createMenuItem,
   getReviewByIndex,
   getLastReview,
+  getReviewByRating
 }
